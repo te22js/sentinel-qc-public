@@ -7,13 +7,19 @@ Your Mac's local database is not uploaded.
 ## First deployment
 
 1. Sign in to https://dashboard.render.com/ or create your account.
-2. Connect GitHub and grant access only to `te22js/sentinel-qc`.
-3. Choose **New → Blueprint**, select that repository and branch `main`, and use
-   the root `render.yaml`.
-4. Verify the service shows the **Free** plan with **no paid disk or database**,
-   then deploy.
-5. Wait for **Live** and open the HTTPS URL Render assigns. Sign in with the
-   existing shared credentials.
+2. Choose **New → Web Service → Public Git Repository** and enter
+   `https://github.com/te22js/sentinel-qc-public` (no GitHub account connection needed).
+3. Select Node, branch `main`, Singapore, and the **Free** compute plan.
+4. Set the build command to
+   `corepack pnpm install --frozen-lockfile --prod=false && corepack pnpm build`
+   and the start command to `bash deploy/start-render.sh`.
+5. Add the non-secret environment settings from `render.yaml`. Set
+   `SENTINEL_ADMIN_PASSWORD` privately to the existing shared password, never in Git.
+6. Under Advanced, set the health check to `/api/v1/health` and Auto-Deploy to Off.
+7. Verify **$0/month**, with no paid disk/database, and deploy. Wait for **Live**.
+
+The configured public address is https://sentinel-qc.onrender.com.
+The root Blueprint also provides the equivalent configuration for future setups.
 
 No purchased domain is required: Render supplies an `onrender.com` address and
 HTTPS. The startup script automatically uses that address for origin checks.
@@ -40,7 +46,7 @@ You must own the domain; buying one is separate from free hosting.
 1. In the Render service, open **Settings → Custom Domains → Add Custom Domain**.
    Use a subdomain such as `qc.yourdomain.com`.
 2. At your domain registrar, add the exact DNS record Render shows. For a `qc`
-   subdomain this is normally a CNAME to your assigned `onrender.com` hostname.
+   subdomain this is normally a CNAME to `sentinel-qc.onrender.com`.
    Remove conflicting records for that same name, not unrelated DNS records.
 3. Verify the domain in Render and wait for its HTTPS certificate to be ready.
 4. Set the service environment variable `SENTINEL_PUBLIC_ORIGIN` to the exact
