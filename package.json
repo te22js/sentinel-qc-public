@@ -1,0 +1,30 @@
+{
+  "name": "sentinel-qc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first laboratory QC platform: Westgard/EWMA/CUSUM monitoring and plate spatial artifact detection.",
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "argon2": "^0.41.1",
+    "better-sqlite3": "^11.8.1"
+  },
+  "scripts": {
+    "dev": "corepack pnpm --parallel --filter @sentinel/server --filter @sentinel/web dev",
+    "build": "corepack pnpm -r --filter './packages/*' build && corepack pnpm --filter @sentinel/web build && corepack pnpm --filter @sentinel/server build && node scripts/assemble-dist.mjs",
+    "test": "corepack pnpm -r test",
+    "typecheck": "corepack pnpm -r typecheck",
+    "lint": "corepack pnpm -r lint",
+    "demo": "corepack pnpm --filter @sentinel/demo start",
+    "verify-audit": "corepack pnpm --filter @sentinel/server verify-audit",
+    "experiments": "corepack pnpm --filter @sentinel/stats experiments"
+  },
+  "pnpm": {
+    "overrides": {
+      "fast-uri@>=3.0.0 <3.1.8": "^3.1.8",
+      "brace-expansion@>=5.0.0 <5.0.12": "^5.0.12"
+    }
+  }
+}

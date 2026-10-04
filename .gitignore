@@ -1,0 +1,16 @@
+node_modules/
+dist/
+*.tsbuildinfo
+data/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.DS_Store
+coverage/
+.vite/
+apps/web/dist/
+tools/reference/.venv/
+playwright-report/
+test-results/
+.e2e-data/
+node_modules.nosync/

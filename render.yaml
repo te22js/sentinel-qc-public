@@ -1,0 +1,27 @@
+# Free temporary hosting: SQLite and reports are lost on restart/redeploy or idle sleep.
+# To retain them later, upgrade the plan and attach a disk (see deploy/RENDER.md).
+services:
+  - type: web
+    name: sentinel-qc
+    runtime: node
+    plan: free
+    region: singapore
+    branch: main
+    numInstances: 1
+    buildCommand: corepack pnpm install --frozen-lockfile --prod=false && corepack pnpm build
+    startCommand: bash deploy/start-render.sh
+    healthCheckPath: /api/v1/health
+    autoDeployTrigger: "off"
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: NODE_ENV
+        value: production
+      - key: SENTINEL_HOST
+        value: 0.0.0.0
+      - key: SENTINEL_SECURE_COOKIES
+        value: "1"
+      - key: SENTINEL_DATA_DIR
+        value: ./data
+      - key: SENTINEL_ADMIN_PASSWORD
+        sync: false

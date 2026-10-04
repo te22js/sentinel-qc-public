@@ -1,0 +1,32 @@
+{
+  "name": "@sentinel/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node -e \"require('fs').cpSync('migrations','dist/migrations',{recursive:true})\"",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "true",
+    "verify-audit": "tsx src/cli/verify-audit.ts"
+  },
+  "dependencies": {
+    "@sentinel/shared": "workspace:*",
+    "better-sqlite3": "^11.8.1",
+    "drizzle-orm": "^0.45.3"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.9"
+  }
+}

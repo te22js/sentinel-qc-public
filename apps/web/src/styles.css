@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-[13px] leading-[1.5] text-slate-800 antialiased;
+    background: #f6f7f9;
+  }
+  * {
+    transition-duration: 120ms;
+  }
+  input,
+  select,
+  textarea {
+    @apply border border-slate-200 rounded-lg px-2.5 py-1.5 bg-white text-slate-800 placeholder:text-slate-300 shadow-[0_1px_1px_rgba(15,23,42,0.03)];
+  }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    @apply outline-none border-blue-600 ring-[3px] ring-blue-600/10;
+  }
+  button {
+    @apply focus:outline-none focus-visible:ring-[3px] focus-visible:ring-blue-600/25;
+  }
+  a:focus-visible {
+    @apply outline-none ring-[3px] ring-blue-600/25 rounded-lg;
+  }
+  ::selection {
+    background: #1d4ed8;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-700 text-white px-3.5 py-1.5 rounded-lg font-medium tracking-[-0.01em] hover:bg-blue-800 active:bg-blue-900 disabled:opacity-40 disabled:cursor-not-allowed;
+    box-shadow: 0 1px 2px rgba(29, 78, 216, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+  .btn-secondary {
+    @apply border border-slate-200 bg-white px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 hover:border-slate-300 disabled:opacity-40 disabled:cursor-not-allowed;
+    box-shadow: 0 1px 1px rgba(15, 23, 42, 0.04);
+  }
+  .card {
+    @apply bg-white border border-slate-200/80 rounded-xl;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  }
+  .num {
+    @apply font-mono tabular-nums;
+  }
+  .microlabel {
+    @apply text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-400;
+  }
+  .th-min {
+    @apply px-2 py-2 text-left text-[10px] font-semibold uppercase tracking-[0.08em] text-slate-400;
+  }
+  .page-title {
+    @apply text-[17px] font-semibold tracking-[-0.02em] text-slate-900;
+  }
+  .page-sub {
+    @apply text-slate-400 text-[12px] mt-0.5;
+  }
+}

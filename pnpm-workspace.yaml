@@ -1,0 +1,5 @@
+packages:
+  - packages/*
+  - apps/*
+  - tools/demo
+  - e2e

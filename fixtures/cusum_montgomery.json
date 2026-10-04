@@ -1,0 +1,187 @@
+{
+ "mu0": 10.0,
+ "k": 0.5,
+ "h": 5.0,
+ "rows": [
+  {
+   "x": 9.45,
+   "cplus": 0.0,
+   "cminus": 0.05,
+   "signal": "none"
+  },
+  {
+   "x": 7.99,
+   "cplus": 0.0,
+   "cminus": 1.56,
+   "signal": "none"
+  },
+  {
+   "x": 9.29,
+   "cplus": 0.0,
+   "cminus": 1.77,
+   "signal": "none"
+  },
+  {
+   "x": 11.66,
+   "cplus": 1.16,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 12.16,
+   "cplus": 2.82,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 10.18,
+   "cplus": 2.5,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 8.04,
+   "cplus": 0.04,
+   "cminus": 1.46,
+   "signal": "none"
+  },
+  {
+   "x": 11.46,
+   "cplus": 1.0,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 9.2,
+   "cplus": 0.0,
+   "cminus": 0.3,
+   "signal": "none"
+  },
+  {
+   "x": 10.34,
+   "cplus": 0.0,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 9.03,
+   "cplus": 0.0,
+   "cminus": 0.47,
+   "signal": "none"
+  },
+  {
+   "x": 11.47,
+   "cplus": 0.97,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 10.51,
+   "cplus": 0.98,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 9.4,
+   "cplus": 0.0,
+   "cminus": 0.1,
+   "signal": "none"
+  },
+  {
+   "x": 10.08,
+   "cplus": 0.0,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 9.37,
+   "cplus": 0.0,
+   "cminus": 0.13,
+   "signal": "none"
+  },
+  {
+   "x": 10.62,
+   "cplus": 0.12,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 10.31,
+   "cplus": 0.0,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 8.52,
+   "cplus": 0.0,
+   "cminus": 0.98,
+   "signal": "none"
+  },
+  {
+   "x": 10.84,
+   "cplus": 0.34,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 10.9,
+   "cplus": 0.74,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 9.33,
+   "cplus": 0.0,
+   "cminus": 0.17,
+   "signal": "none"
+  },
+  {
+   "x": 12.29,
+   "cplus": 1.79,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 11.5,
+   "cplus": 2.79,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 10.6,
+   "cplus": 2.89,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 11.08,
+   "cplus": 3.47,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 10.38,
+   "cplus": 3.35,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 11.62,
+   "cplus": 4.47,
+   "cminus": 0.0,
+   "signal": "none"
+  },
+  {
+   "x": 11.31,
+   "cplus": 5.28,
+   "cminus": 0.0,
+   "signal": "up"
+  },
+  {
+   "x": 10.52,
+   "cplus": 5.3,
+   "cminus": 0.0,
+   "signal": "up"
+  }
+ ]
+}
