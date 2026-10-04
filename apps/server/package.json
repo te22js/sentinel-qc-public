@@ -18,7 +18,7 @@
     "@sentinel/shared": "workspace:*",
     "@sentinel/stats": "workspace:*",
     "argon2": "^0.41.1",
-    "better-sqlite3": "^11.8.1",
+    "better-sqlite3": "^13.0.3",
     "fastify": "^5.12.5",
     "zod": "^3.23.8"
   },
